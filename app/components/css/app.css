@@ -1,0 +1,40 @@
+/* app css stylesheet */
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.logo{
+    font-size: 25px;
+    border: 0;
+    padding: 0;
+}
+
+.pay{
+    font-size: 45px;
+    padding: 0;
+    border: 0;
+}
+
+.copy{
+    padding:10px;
+}
+
+.float-right{
+    float: right;
+    text-align: center;
+    position: relative;
+    display: block;
+    padding-right: 0;
+}
+
+.float-left {
+    float: left;
+    text-align: center;
+    position: relative;
+    display: block;
+    padding-left: 0;
+}
+
+.space{
+    padding-bottom: 20px;
+}

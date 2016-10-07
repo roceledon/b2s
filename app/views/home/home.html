@@ -1,0 +1,31 @@
+<div class="col-md-9">
+    <div id="slides_control" class="row space">
+        <div class="col-sm-12 col-lg-12 col-md-12" ng-controller="HomeCtrl">
+            <carousel interval="myInterval">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                    <img ng-src="{{slide.image}}" id="{{slide.id}}" class="carousel-image">
+                    <div class="carousel-caption">
+                       <!-- <h4>Slide {{$index+1}}</h4> -->
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+    <div class="row" ng-controller="HomeCtrl">
+        <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="item in items">
+            <div class="thumbnail">
+                <img ng-src="{{item.image}}" alt="">
+                <div class="caption">
+                    <h4 class="pull-right">${{item.price}}</h4>
+                    <h4><a href="{{item.url}}">{{item.title}}</a>
+                    </h4>
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">{{item.reviews}} reviews</p>
+                    <p ng-bind-html="getStars(item.stars)"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

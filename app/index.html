@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="b2s" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="b2s" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="b2s" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="b2s" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Buy to Sell</title>
+        <link rel="icon" type="image/x-icon" href="components/img/favicon.ico"/>
+
+        <!-- html5-boilerplate -->
+        <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+        <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="components/css/app.css">
+
+        <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--
+        <ul class="menu">
+            <li><a href="#!/view1">view1</a></li>
+            <li><a href="#!/view2">view2</a></li>
+        </ul>
+        -->
+        <!--[if lt IE 7]>
+        <p class="browsehappy">
+            Estas usando un navegador <strong>desactualizado</strong>.&nbsp;
+            Porfavor <a href="http://browsehappy.com/">actualiza tu navegador</a> y mejora tu experiencia.
+        </p>
+        <![endif]-->
+
+        <div ng-controller="ContainerCtrl" class="header">
+            <div ng-include="header"></div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row space">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" style="height: 33px;" placeholder="Buscar...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div>
+            <div class="row">
+                <div ng-controller="ContainerCtrl">
+                    <div ng-include="category"></div>
+                </div>
+                <div ng-view></div>
+            </div>
+        </div>
+        <!-- /.container -->
+        <div ng-controller="ContainerCtrl">
+            <div ng-include="footer"></div>
+        </div>
+        <!--
+        In production use:
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+        -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="app.js"></script>
+        <script src="views/container/container.js"></script>
+        <script src="views/home/home.js"></script>
+        <script src="views/contact/contact.js"></script>
+        <script src="views/category/category.js"></script>
+        <script src="components/version/version.js"></script>
+        <script src="components/version/version-directive.js"></script>
+        <script src="components/version/interpolate-filter.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular-css/angular-css.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    </body>
+</html>
