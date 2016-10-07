@@ -105,6 +105,6 @@ angular.module('b2s.views.home', ['ngRoute','ui.bootstrap'])
         };
 
         $scope.$watch('items',function(newValue,oldValue){
-            console.log($scope.items);
+            //console.log($scope.items);
         });
     }]);
